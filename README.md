@@ -14,3 +14,7 @@ python app.py
 ```
 
 Access the web app at `http://localhost:5000`.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=nickyqqq/blind-xss-dorker&type=Date)](https://www.star-history.com/#nickyqqq/blind-xss-dorker&Date)
