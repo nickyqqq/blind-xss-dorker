@@ -1,4 +1,5 @@
 # Blind XSS Dorker
+![Blind XSS Dorker Screenshot](images/screenshot_127.0.0.1_5000_20260220_183618.png)
 
 This tool automates Google dork generation for finding potential input points (such as contact forms) on a target domain for blind XSS testing.
 
