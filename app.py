@@ -15,148 +15,375 @@ app = Flask(__name__)
 DORK_CATEGORIES = {
     "Generic Contact Forms": {
         "icon": "📬",
-        "dorks": [
-            'site:%s inurl:contact',
-            'site:%s inurl:contact-us',
-            'site:%s inurl:contactus',
-            'site:%s inurl:contact_us',
-            'site:%s intitle:"contact us"',
-            'site:%s intitle:"contact" inurl:form',
-            'site:%s "contact form" inurl:php',
-            'site:%s inurl:reach-us',
-            'site:%s inurl:get-in-touch',
-            'site:%s inurl:write-to-us',
+        "inurl_patterns": [
+            "contact",
+            "contact-us",
+            "contactus",
+            "contact_us",
+            "contact.php",
+            "contact-us.php",
+            "contact-form",
+            "contact-form.php",
+            "get-in-touch",
+            "getintouch",
+            "reach-us",
+            "reachus",
+            "write-to-us",
+            "write-us",
+            "send-message",
+            "message-us",
+            "support/contact",
+            "customer-service",
+            "enquiry",
+            "enquiries",
+            "inquiry",
+            "inquiries",
+            "ask-us",
+            "connect-with-us",
+            "mail-us",
+            "feedback/contact",
+            "about/contact",
+            "help/contact",
         ],
     },
     "Feedback & Comment Forms": {
         "icon": "📝",
-        "dorks": [
-            'site:%s inurl:feedback',
-            'site:%s inurl:feedback-form',
-            'site:%s intitle:"feedback" inurl:form',
-            'site:%s inurl:comment inurl:form',
-            'site:%s inurl:comments',
-            'site:%s "leave a comment" OR "post a comment"',
-            'site:%s inurl:review inurl:form',
-            'site:%s inurl:testimonial inurl:form',
+        "inurl_patterns": [
+            "feedback",
+            "feedback-form",
+            "feedback.php",
+            "submit-feedback",
+            "rate-us",
+            "review",
+            "reviews",
+            "comment",
+            "comments",
+            "comment-form",
+            "leave-comment",
+            "post-comment",
+            "add-comment",
+            "testimonial",
+            "testimonials",
+            "suggestion",
+            "suggestions",
+            "suggestion-box",
+            "complaint",
+            "complaints",
+            "guestbook",
+            "idea",
+            "ideas",
+            "user-feedback",
+            "product-review",
         ],
     },
     "Login & Registration Forms": {
         "icon": "🔐",
-        "dorks": [
-            'site:%s inurl:login',
-            'site:%s inurl:signin',
-            'site:%s inurl:register',
-            'site:%s inurl:signup',
-            'site:%s inurl:account/create',
-            'site:%s inurl:user/register',
-            'site:%s inurl:join',
-            'site:%s intitle:"create account"',
-            'site:%s intitle:"sign up" inurl:form',
+        "inurl_patterns": [
+            "login",
+            "login.php",
+            "signin",
+            "sign-in",
+            "sign_in",
+            "register",
+            "registration",
+            "signup",
+            "sign-up",
+            "create-account",
+            "account/create",
+            "user/register",
+            "member/register",
+            "auth/login",
+            "account/login",
+            "my-account/login",
+            "join",
+            "forgot-password",
+            "reset-password",
+            "password-reset",
+            "new-account",
+            "activate-account",
+            "verify-account",
+            "oauth/login",
         ],
     },
     "Search Boxes": {
         "icon": "🔍",
-        "dorks": [
-            'site:%s inurl:search',
-            'site:%s inurl:q= OR inurl:query= OR inurl:s=',
-            'site:%s intitle:"search" inurl:search',
-            'site:%s inurl:find',
-            'site:%s inurl:lookup',
+        "inurl_patterns": [
+            "search",
+            "search.php",
+            "site-search",
+            "search-results",
+            "result",
+            "results",
+            "find",
+            "finder",
+            "lookup",
+            "discover",
+            "q=",
+            "query=",
+            "s=",
+            "keyword",
+            "keywords",
+            "filter",
+            "advanced-search",
+            "quick-search",
+            "find-results",
+            "catalog/search",
         ],
     },
     "Support & Help Desk": {
         "icon": "💬",
-        "dorks": [
-            'site:%s inurl:support',
-            'site:%s inurl:helpdesk',
-            'site:%s inurl:help inurl:form',
-            'site:%s inurl:ticket',
-            'site:%s inurl:submit-ticket',
-            'site:%s inurl:open-ticket',
-            'site:%s intitle:"submit a request"',
-            'site:%s intitle:"help desk"',
+        "inurl_patterns": [
+            "support",
+            "support.php",
+            "help",
+            "helpdesk",
+            "help-desk",
+            "ticket",
+            "tickets",
+            "submit-ticket",
+            "open-ticket",
+            "new-ticket",
+            "create-ticket",
+            "service-request",
+            "request-support",
+            "contact-support",
+            "customer-support",
+            "knowledgebase",
+            "kb",
+            "faq/contact",
+            "livechat",
+            "chat-support",
+            "case",
+            "case-create",
+            "incident",
+            "issue-report",
         ],
     },
     "Survey & Poll Forms": {
         "icon": "📊",
-        "dorks": [
-            'site:%s inurl:survey',
-            'site:%s inurl:poll',
-            'site:%s inurl:questionnaire',
-            'site:%s intitle:"survey" inurl:form',
-            'site:%s inurl:quiz',
+        "inurl_patterns": [
+            "survey",
+            "surveys",
+            "poll",
+            "polls",
+            "questionnaire",
+            "quiz",
+            "assessment",
+            "vote",
+            "voting",
+            "feedback-survey",
+            "customer-survey",
+            "satisfaction-survey",
+            "form/survey",
+            "research-survey",
+            "market-survey",
+            "user-study",
+            "public-opinion",
+            "ranking",
         ],
     },
     "Order & Checkout Forms": {
         "icon": "📦",
-        "dorks": [
-            'site:%s inurl:order',
-            'site:%s inurl:checkout',
-            'site:%s inurl:cart',
-            'site:%s inurl:purchase',
-            'site:%s inurl:buy',
-            'site:%s inurl:payment',
-            'site:%s intitle:"order form"',
+        "inurl_patterns": [
+            "order",
+            "order-form",
+            "place-order",
+            "checkout",
+            "checkout.php",
+            "cart",
+            "basket",
+            "purchase",
+            "buy",
+            "payment",
+            "pay",
+            "billing",
+            "shipping",
+            "address",
+            "invoice",
+            "confirm-order",
+            "payment-method",
+            "transaction",
+            "donate",
+            "donation",
+            "checkout/guest",
+            "coupon",
+            "promo",
         ],
     },
     "Newsletter & Subscribe": {
         "icon": "📋",
-        "dorks": [
-            'site:%s inurl:subscribe',
-            'site:%s inurl:newsletter',
-            'site:%s inurl:mailing-list',
-            'site:%s intitle:"subscribe" inurl:form',
-            'site:%s "subscribe to our newsletter"',
+        "inurl_patterns": [
+            "subscribe",
+            "subscription",
+            "newsletter",
+            "mailing-list",
+            "join-list",
+            "email-signup",
+            "email-subscribe",
+            "optin",
+            "opt-in",
+            "sign-up-newsletter",
+            "news-signup",
+            "stay-updated",
+            "alerts",
+            "updates",
+            "notify-me",
+            "newsletters",
+            "rss-signup",
+            "follow-updates",
         ],
     },
     "Profile & Account Forms": {
         "icon": "🧑‍💼",
-        "dorks": [
-            'site:%s inurl:profile',
-            'site:%s inurl:account/edit',
-            'site:%s inurl:settings',
-            'site:%s inurl:update-profile',
-            'site:%s inurl:my-account',
-            'site:%s inurl:dashboard',
+        "inurl_patterns": [
+            "profile",
+            "profile/edit",
+            "edit-profile",
+            "account",
+            "my-account",
+            "account/settings",
+            "settings",
+            "preferences",
+            "user/settings",
+            "dashboard",
+            "account/update",
+            "update-profile",
+            "change-email",
+            "change-password",
+            "personal-info",
+            "account-details",
+            "privacy-settings",
+            "notifications/settings",
+            "user/profile",
+            "member/profile",
         ],
     },
     "Upload & File Submission": {
         "icon": "📤",
-        "dorks": [
-            'site:%s inurl:upload',
-            'site:%s inurl:file-upload',
-            'site:%s inurl:submit',
-            'site:%s inurl:submission',
-            'site:%s intitle:"upload" inurl:form',
-            'site:%s inurl:apply',
+        "inurl_patterns": [
+            "upload",
+            "uploads",
+            "file-upload",
+            "upload-file",
+            "submit",
+            "submission",
+            "submit-form",
+            "attachments",
+            "attachment",
+            "document-upload",
+            "image-upload",
+            "media-upload",
+            "resume-upload",
+            "cv-upload",
+            "apply",
+            "dropzone",
+            "import",
+            "import-file",
+            "share-file",
+            "send-file",
         ],
     },
     "Job & Career Applications": {
         "icon": "💼",
-        "dorks": [
-            'site:%s inurl:careers',
-            'site:%s inurl:jobs',
-            'site:%s inurl:apply',
-            'site:%s intitle:"job application"',
-            'site:%s inurl:recruitment',
-            'site:%s inurl:vacancy',
+        "inurl_patterns": [
+            "careers",
+            "career",
+            "jobs",
+            "job",
+            "apply",
+            "job-application",
+            "recruitment",
+            "vacancy",
+            "vacancies",
+            "hiring",
+            "work-with-us",
+            "join-our-team",
+            "talent",
+            "internship",
+            "apprenticeship",
+            "candidate",
+            "employment",
+            "positions",
+            "job/apply",
+            "careers/apply",
         ],
     },
     "Admin & Backend Panels": {
         "icon": "⚙️",
-        "dorks": [
-            'site:%s inurl:admin',
-            'site:%s inurl:wp-admin',
-            'site:%s inurl:administrator',
-            'site:%s inurl:cpanel',
-            'site:%s inurl:phpmyadmin',
-            'site:%s intitle:"admin panel"',
-            'site:%s inurl:manage',
-            'site:%s inurl:portal',
+        "inurl_patterns": [
+            "admin",
+            "admin.php",
+            "admin/login",
+            "wp-admin",
+            "administrator",
+            "backend",
+            "manage",
+            "manager",
+            "control-panel",
+            "cpanel",
+            "portal",
+            "dashboard/admin",
+            "phpmyadmin",
+            "useradmin",
+            "staff",
+            "moderator",
+            "console",
+            "auth/admin",
+            "admin-area",
+            "secure-admin",
         ],
     },
 }
+
+MAX_INURLS_PER_DORK = 12
+MAX_DORK_LENGTH = 430
+
+
+def _normalize_inurl_pattern(pattern):
+    p = (pattern or "").strip().strip('"').strip("'")
+    if p.lower().startswith("inurl:"):
+        p = p[6:].strip().strip('"').strip("'")
+    return p
+
+
+def build_topic_dorks(target, inurl_patterns):
+    normalized = []
+    seen = set()
+    for raw_pattern in inurl_patterns:
+        pattern = _normalize_inurl_pattern(raw_pattern)
+        if not pattern:
+            continue
+        key = pattern.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        normalized.append(pattern)
+
+    if not normalized:
+        return [], 0
+
+    dorks = []
+    current_group = []
+
+    for pattern in normalized:
+        token = f'inurl:"{pattern}"'
+        if not current_group:
+            current_group = [token]
+            continue
+
+        candidate = current_group + [token]
+        candidate_query = f'site:{target} (' + " | ".join(candidate) + ")"
+
+        if len(candidate) > MAX_INURLS_PER_DORK or len(candidate_query) > MAX_DORK_LENGTH:
+            dorks.append(f'site:{target} (' + " | ".join(current_group) + ")")
+            current_group = [token]
+        else:
+            current_group = candidate
+
+    if current_group:
+        dorks.append(f'site:{target} (' + " | ".join(current_group) + ")")
+
+    return dorks, len(normalized)
 
 # ──────────────────────────────────────────────────────────────────────────────
 # HTML Template
@@ -747,7 +974,7 @@ function renderResults(data) {
         ${escapeHtml(cat.name)}
       </div>
       <div style="display:flex;align-items:center;gap:1rem;">
-        <span class="cat-count">${cat.dorks.length} dork${cat.dorks.length!==1?'s':''}</span>
+        <span class="cat-count">${cat.pattern_count} inurl pattern${cat.pattern_count!==1?'s':''} / ${cat.dorks.length} query pack${cat.dorks.length!==1?'s':''}</span>
         <span class="cat-toggle open">▾</span>
       </div>`;
 
@@ -847,11 +1074,12 @@ def dork():
 
     categories = []
     for name, meta in DORK_CATEGORIES.items():
-        filled = [d % target for d in meta["dorks"]]
+        filled, pattern_count = build_topic_dorks(target, meta["inurl_patterns"])
         categories.append({
             "name": name,
             "icon": meta["icon"],
             "dorks": filled,
+            "pattern_count": pattern_count,
         })
 
     return jsonify({"target": target, "categories": categories})
